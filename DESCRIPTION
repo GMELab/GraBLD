@@ -1,0 +1,14 @@
+Package: GraBLD
+Type: Package
+Title: Gradient Boosted and LD adjusted
+Version: 0.1.0
+Author: Shihong Mao, Guillaume Pare, Wei Q. Deng
+Maintainer: Shihong Mao <maos@phri.ca>
+Description: Gradient boosted and LD adjusted (GraBLD) produces boosted and LD corrected polygenic gene scores that can be applied to polygenic traits prediction. The gradient boosted regression tree model is first used to optimize the weights of SNPs included in the polygenic scores by leveraging the large number of variants in genome-wide studies and the availability of summary association test statistics from meta-analyses. The linkage disequilibrium between SNPs is then adjusted locally in a user-defined regional. The details of the method is described in Pare et al (http://biorxiv.org/content/early/2017/02/09/107409).
+License: file LICENSE
+Encoding: UTF-8
+Imports: gbm, 
+    data.table
+Depends: R (>= 3.1.0)
+LazyData: true
+RoxygenNote: 6.0.1
