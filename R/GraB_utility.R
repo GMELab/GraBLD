@@ -409,9 +409,9 @@ GraB <- function(betas, annotations, pos = 2, pos_sign = 3,
         which.var <- abs_effect
     }
     var_names <- colnames(annotations)
- #   var_names[1] = paste(trait_name, "_univariate_Beta", sep = "")
     formulas = get_formulas(name = trait_name, var_names = var_names[which.var])
-
+    var_names[1] = paste(trait_name, "_univariate_Beta", sep = "")
+   
     data_num <- as.data.frame(data_num)
     names(data_num) <- var_names
 
