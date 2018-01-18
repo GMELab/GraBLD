@@ -125,10 +125,10 @@ load_database = function(annotation_file, pos = 2) {
 #'
 
 get_formulas = function(name, var_names) {
-    var_names[1] = paste(name, "_univariate_Beta", sep = "")
+   # var_names[1] = paste(name, "_univariate_Beta", sep = "")
     formulas = paste(name, "_univariate_Beta ~ ", var_names[1],
         sep = "")
-    if (length(var_names) >= 3) {
+    if (length(var_names) >= 2) {
         for (i in 2:length(var_names)) {
             formulas = paste(formulas, " + ", var_names[i],
                 sep = "")
@@ -409,7 +409,7 @@ GraB <- function(betas, annotations, pos = 2, pos_sign = 3,
         which.var <- abs_effect
     }
     var_names <- colnames(annotations)
-    var_names[1] = paste(trait_name, "_univariate_Beta", sep = "")
+ #   var_names[1] = paste(trait_name, "_univariate_Beta", sep = "")
     formulas = get_formulas(name = trait_name, var_names = var_names[which.var])
 
     data_num <- as.data.frame(data_num)
