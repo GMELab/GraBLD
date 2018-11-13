@@ -266,8 +266,7 @@ get_data_num <- function(betas, annotations, pos = 2, pos_sign = 3,
 #'   the effect rather than the direction of the effect is informative for improving the polygenic score weights.
 #'
 #' @param which.var a vector of integers indicating which columns of \code{annotations} should be included in the formula to
-#'    update the weights. Should be have at least length of two and can not take value 1 (the column for SNP ID). If not provided,
-#'    it will be set to \code{abs_effect}.
+#'    update the weights. Should be have at least length of two and can not take value 1 (the column for SNP ID).
 #'
 #' @param steps an integer indicating the current cross-fold
 #'
