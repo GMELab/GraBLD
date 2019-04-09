@@ -330,5 +330,6 @@ genomewideLD = function(geno_data, size = 300) {
             }
         }
     }
+	LDadj[which(LDadj < 1)] = 1 #Monomorphic SNPs
     return(LDadj)
 }
